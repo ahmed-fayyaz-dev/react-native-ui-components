@@ -1,5 +1,3 @@
-Here is an updated `README.md` for the `react-native-txlabz-components` SDK, incorporating the provided props and simplified usage examples for each component:
-
 ```markdown
 # React Native TxLabz Components SDK
 
