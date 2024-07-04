@@ -1,4 +1,3 @@
-```markdown
 # React Native TxLabz Components SDK
 
 The `react-native-txlabz-components` SDK provides a set of reusable UI components for React Native applications. This SDK includes components such as `Button`, `Header`, `ProgressiveImage`, `Screen`, `Text`, and `TextInput`.
