@@ -139,15 +139,17 @@ export default function TextInput(props: Props) {
 
   return (
     <Wrapper style={[styles.container, containerStyle]}>
-      <View style={styles.titleContainer}>
-        <Text
-          text={title}
-          allowFontScaling={false}
-          fontWeight={'600'}
-          // fontSize={}
-          {...titleProps}
-        />
-      </View>
+      {title ? (
+        <View style={styles.titleContainer}>
+          <Text
+            text={title}
+            allowFontScaling={false}
+            fontWeight={'600'}
+            // fontSize={}
+            {...titleProps}
+          />
+        </View>
+      ) : null}
       <View
         style={[
           styles.inputContainer,

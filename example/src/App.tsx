@@ -1,16 +1,16 @@
+import Ionicons from '@expo/vector-icons/Ionicons';
 import * as React from 'react';
-import { StyleSheet, View, Alert } from 'react-native';
+import { Alert, StyleSheet, View } from 'react-native';
+import * as Progress from 'react-native-progress';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import {
   Button,
-  Text,
-  Screen,
   Header,
   ProgressiveImage,
+  Screen,
+  Text,
   TextInput,
 } from 'react-native-txlabz-components';
-import Ionicons from '@expo/vector-icons/Ionicons';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-import * as Progress from 'react-native-progress';
 
 const useRefs = () => {
   return {
@@ -94,7 +94,20 @@ function ComponentScreen() {
         inputRef={refs.secondInputRef}
       />
       <Text text="MultiLine input (Enter long text)" center top={10} />
-      <TextInput title="2nd Input" multiline placeholder="Multiline text" />
+      <TextInput
+        title="MultiLine Input"
+        multiline
+        placeholder="Multiline text"
+      />
+      <Text text="Left and Right Accessory Support" center top={10} />
+      <TextInput
+        title="Input Accessory"
+        placeholder="PlaceHolder"
+        renderRightAccessory={() => <Ionicons name="eye-off" size={20} />}
+        renderLeftAccessory={() => (
+          <Ionicons name="key" size={20} style={{ marginRight: 10 }} />
+        )}
+      />
     </View>
   );
 
