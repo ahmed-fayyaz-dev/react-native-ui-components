@@ -238,6 +238,30 @@ interface ScreenProps {
 }
 ```
 
+### VirtualizedScrollContainer
+
+A container component that leverages `FlatList` to virtualize long lists of children components.
+
+#### Usage
+
+```tsx
+import VirtualizedScrollContainer from 'react-native-txlabz-components';
+
+<VirtualizedScrollContainer>
+  {/* Your components here */}
+</VirtualizedScrollContainer>
+```
+
+#### Props
+
+```ts
+interface VirtualizedListContainerProps<ItemT> extends Omit<FlatListProps<ItemT>, 'data' | 'renderItem'> {
+  children: ReactNode;
+  style?: FlexStyle;
+}
+```
+
+
 ## Contributing
 
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
