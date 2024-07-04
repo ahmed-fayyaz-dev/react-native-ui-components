@@ -242,6 +242,11 @@ interface ScreenProps {
 
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
 
+You can run the example project using :
+```js
+yarn example start
+```
+
 ## License
 
 MIT
