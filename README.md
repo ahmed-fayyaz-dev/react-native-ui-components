@@ -238,7 +238,6 @@ interface ScreenProps {
 }
 ```
 
-This `README.md` includes installation instructions, descriptions of each component, their props, and a usage example. Adjust the content as needed to fit your specific SDK and requirements.
 ## Contributing
 
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
