@@ -8,4 +8,5 @@ export const colors = {
   muted: '#D8D8D8', // disabled
   mutedText: '#666666', // disabled text
   transparent: 'rgba(0, 0, 0, 0)',
+  danger: 'red',
 };

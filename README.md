@@ -113,6 +113,9 @@ import { TextInput } from 'react-native-txlabz-components';
   placeholder="Placeholder" 
   renderLeftAccessory={() => <Ionicons name="key" size={20} />} 
   renderRightAccessory={() => <Ionicons name="eye-off" size={20} />}
+  required={true} // pass this to show "*" on required inputs
+  helperText="Input is required"
+  isHelperTextVisible={true} // to show error below input
 />
 ```
 
@@ -127,6 +130,10 @@ interface Props extends TextInputProps {
   inputRef?: any;
   pressable?: boolean;
   onPress?: () => void;
+  required?: boolean;
+  helperText?: string;
+  isHelperTextVisible?: boolean;
+  HelperTextProps?: HelperTextProps;
   editable?: boolean;
   titleProps?: TextProps;
   nextInputRef?: React.MutableRefObject<RNTextInput | undefined>;

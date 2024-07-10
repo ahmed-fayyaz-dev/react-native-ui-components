@@ -150,10 +150,8 @@ export default function Button(props: Props) {
     borderColor: variant === 'outline' ? _textColor : undefined,
   };
 
-  const Component = variant === 'text' ? TouchableOpacity : TouchableOpacity;
   return (
-    // @ts-ignore
-    <Component
+    <TouchableOpacity
       style={[
         styles.container,
         small && styles.smallContainer,
@@ -163,9 +161,6 @@ export default function Button(props: Props) {
       activeOpacity={0.5}
       {...rest}
     >
-      {/* {loading ? (
-        <ActivityIndicator color={_textColor} />
-      ) : ( */}
       <>
         {LeftIcon && (
           <LeftIcon
@@ -187,7 +182,6 @@ export default function Button(props: Props) {
           />
         )}
       </>
-      {/* )} */}
-    </Component>
+    </TouchableOpacity>
   );
 }

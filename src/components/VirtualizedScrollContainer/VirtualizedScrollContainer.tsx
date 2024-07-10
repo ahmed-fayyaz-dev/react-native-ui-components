@@ -26,7 +26,6 @@ function VirtualizedScrollContainer<ItemT>({
       style={[style.container, styleOverride]}
       data={[]}
       keyExtractor={() => 'key'}
-      // contentInsetAdjustmentBehavior="automatic"
       renderItem={null}
       ListHeaderComponent={<>{children}</>}
       {...props}

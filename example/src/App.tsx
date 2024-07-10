@@ -87,6 +87,9 @@ function ComponentScreen() {
         placeholder="Placeholder"
         inputRef={refs.firstInputRef}
         nextInputRef={refs.secondInputRef}
+        required={true} // pass this to show "*" on required inputs
+        helperText="Input is required"
+        isHelperTextVisible={true} // to show error below input
       />
       <TextInput
         title="2nd Title"

@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import { colors } from '../../constants/colors';
 import Text, { type TextProps } from '../Text';
+import HelperText, { type HelperTextProps } from '../HelperText';
 
 const spacing = {
   small: 6,
@@ -71,6 +72,10 @@ export interface Props extends TextInputProps {
   inputRef?: any;
   pressable?: boolean;
   onPress?: () => void;
+  required?: boolean;
+  helperText?: string;
+  isHelperTextVisible?: boolean;
+  HelperTextProps?: HelperTextProps;
   editable?: boolean;
   titleProps?: TextProps;
   nextInputRef?: React.MutableRefObject<RNTextInput | undefined>;
@@ -97,6 +102,10 @@ export default function TextInput(props: Props) {
     nextInputRef,
     pressable,
     onPress,
+    required,
+    helperText,
+    isHelperTextVisible,
+    HelperTextProps,
     titleProps,
     editable = true,
     returnKeyType = nextInputRef ? 'next' : undefined,
@@ -142,10 +151,9 @@ export default function TextInput(props: Props) {
       {title ? (
         <View style={styles.titleContainer}>
           <Text
-            text={title}
+            text={required ? `${title} *` : title}
             allowFontScaling={false}
             fontWeight={'600'}
-            // fontSize={}
             {...titleProps}
           />
         </View>
@@ -179,6 +187,9 @@ export default function TextInput(props: Props) {
 
         {renderRightAccessory?.()}
       </View>
+      {isHelperTextVisible && (
+        <HelperText text={helperText} {...HelperTextProps} />
+      )}
     </Wrapper>
   );
 }

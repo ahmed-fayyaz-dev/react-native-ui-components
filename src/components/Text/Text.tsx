@@ -12,7 +12,6 @@ interface TextProps extends RNTextProps {
   hitSlop?: Insets;
 }
 export default function Text(props: TextProps) {
-  // grab the props
   const {
     center,
     text,
@@ -34,7 +33,6 @@ export default function Text(props: TextProps) {
   } = props;
   let { color = colors.text } = props;
 
-  // figure out which content to use
   const content = text || children;
 
   const truncatedContent =
